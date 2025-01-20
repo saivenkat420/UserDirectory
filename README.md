@@ -1,33 +1,32 @@
-User Directory React App
+# User Directory React App
 
-Introduction
+## Introduction
 
-The User Directory app is made with React. It helps people see and use a list of users from an online API. With this app, you can search for users, sort them, and check detailed info about each person. You can also switch between light and dark themes.
+The **User Directory** app is made with React. It helps people see and use a list of users from an online API. With this app, you can search for users, sort them, and check detailed info about each person. You can also switch between light and dark themes.
 
-What the App Can Do
+---
 
-Home Page:
+## What the App Can Do
 
-Shows a list of users with their names, emails, and cities.
+- **Home Page**:
+  - Shows a list of users with their names, emails, and cities.
+  - Lets you search for users by name.
+  - Lets you sort users in A-Z or Z-A order.
 
-Lets you search for users by name.
+- **User Details Page**:
+  - Shows more details about a user, like their phone number, company, and website.
 
-Lets you sort users in A-Z or Z-A order.
+- **Theme Switcher**:
+  - Lets you pick light or dark mode.
 
-User Details Page:
+- **Handles Errors**:
+  - Shows error messages if the API doesn't work and lets you retry.
 
-Shows more details about a user, like their phone number, company, and website.
+---
 
-Theme Switcher:
+## How the Project is Organized
 
-Lets you pick light or dark mode.
-
-Handles Errors:
-
-Shows error messages if the API doesn't work and lets you retry.
-
-How the Project is Organized
-
+```
 user-directory
 ├── src
 │   ├── components
@@ -54,103 +53,104 @@ user-directory
 ├── package.json
 ├── package-lock.json
 ├── README.md
+```
 
-How to Install
+---
 
-Copy the project:
+## How to Install
 
-git clone <repository-url>
+1. Copy the project:
+   ```bash
+   git clone <repository-url>
+   ```
 
-Go to the project folder:
+2. Go to the project folder:
+   ```bash
+   cd user-directory
+   ```
 
-cd user-directory
+3. Install everything the app needs:
+   ```bash
+   npm install
+   ```
 
-Install everything the app needs:
+4. Run the app:
+   ```bash
+   npm start
+   ```
 
-npm install
+---
 
-Run the app:
+## How to Use
 
-npm start
+1. **Home Page**:
+   - Type in the search bar to find a user.
+   - Use the dropdown to sort users.
+   - Click "Get Details" to see more about a user.
 
-How to Use
+2. **User Details Page**:
+   - Check all the info about the user.
+   - Click "Go Back" to return to the home page.
 
-Home Page:
+3. **Theme Switcher**:
+   - Click the button to change between light and dark mode.
 
-Type in the search bar to find a user.
+---
 
-Use the dropdown to sort users.
+## Important Files and Folders
 
-Click "Get Details" to see more about a user.
+### `App.js`
+- The main file that sets up the pages.
+- Gets user data from the API and shares it with the app.
 
-User Details Page:
+### `UsersContext.js`
+- Manages data and settings for the app.
+- Includes user list, theme settings, API status, and helper functions.
 
-Check all the info about the user.
+### `Header`
+- Has the search bar, sorting menu, and theme button.
+- Appears on all pages.
 
-Click "Go Back" to return to the home page.
+### `HomePage`
+- Shows the list of users.
+- Includes search, sorting, and error handling.
 
-Theme Switcher:
+### `UserDetails`
+- Displays full info about one user.
+- Lets you go back to the home page.
 
-Click the button to change between light and dark mode.
+---
 
-Important Files and Folders
-
-App.js
-
-The main file that sets up the pages.
-
-Gets user data from the API and shares it with the app.
-
-UsersContext.js
-
-Manages data and settings for the app.
-
-Includes user list, theme settings, API status, and helper functions.
-
-Header
-
-Has the search bar, sorting menu, and theme button.
-
-Appears on all pages.
-
-HomePage
-
-Shows the list of users.
-
-Includes search, sorting, and error handling.
-
-UserDetails
-
-Displays full info about one user.
-
-Lets you go back to the home page.
-
-API Information
+## API Information
 
 The app gets user info from this link:
-
+```
 https://jsonplaceholder.typicode.com/users
+```
+- **Method**: GET
+- **What You Get**: A list of users with details like `id`, `name`, `email`, `phone`, `company`, and `address`.
 
-Method: GET
+---
 
-What You Get: A list of users with details like id, name, email, phone, company, and address.
+## Tools Used
 
-Tools Used
+- **React**: For building the app.
+- **react-router-dom**: For moving between pages.
+- **react-icons**: For adding icons.
+- **react-spinners**: For showing loading animations.
 
-React: For building the app.
+---
 
-react-router-dom: For moving between pages.
+## Plans for the Future
 
-react-icons: For adding icons.
+- Add pages to handle big user lists.
+- Make the design better and work well on all screens.
+- Add more ways to filter and sort users.
+- Write more tests to check the app works.
 
-react-spinners: For showing loading animations.
+---
 
-Plans for the Future
+## License
 
-Add pages to handle big user lists.
+This app uses the MIT License. Check the LICENSE file for more details.
 
-Make the design better and work well on all screens.
-
-Add more ways to filter and sort users.
-
-Write more tests to check the app works.
